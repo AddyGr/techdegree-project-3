@@ -1,3 +1,10 @@
+/** 
+ * Has been tested in Chrome, Firefox, Edge
+ * Works in Chrome. 
+ * Mostly works in Firefox, with the exception of the shirt color selection not behaving 100%. 
+ * The JS isn't loading in Edge. 
+*/
+
 
 // global variables
 //name and email input variables
