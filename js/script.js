@@ -16,9 +16,10 @@ const emailInput = document.getElementById('mail');
 const otherJobInput = document.getElementById('other-title');
 const otherJob = otherJobInput.previousElementSibling;
 const jobDropdown = document.getElementById('title');
-const shirtStyleDropdown = document.getElementById('design');
-const shirtColorList = document.getElementById('color');
 //t-shirt field 
+const shirtStyleDropdown = document.getElementById('design');
+const colorSelectDiv = document.getElementById('colors-js-puns');
+const shirtColorList = document.getElementById('color');
 const cornflowerBlue = shirtColorList.firstElementChild;
 const noColorDefault = document.createElement('option');
 noColorDefault.value = '';
@@ -71,6 +72,7 @@ const heartJsColors = [];
 //makes the name field infocus on page load
 nameInput.focus();
 
+colorSelectDiv.style.display = 'none';
 //makes the colors for the t-shirt selection hidden before a t-shirt theme is selected
 noColorVisible();
 
@@ -305,8 +307,10 @@ jobDropdown.addEventListener('change', (e) => {
 //event listener for the t-shirt theme selection 
 shirtStyleDropdown.addEventListener('change', (e) => {
     if(e.target.value == 'js puns'){
+        colorSelectDiv.style.display = '';
         visibleColorOptions(jsPunsColors, heartJsColors);
     } else if (e.target.value == 'heart js'){
+        colorSelectDiv.style.display = '';
         visibleColorOptions(heartJsColors, jsPunsColors);
     } else {
         noColorVisible();
